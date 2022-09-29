@@ -29,6 +29,16 @@
             <td th:text="${contato.nome}"></td>
             <td th:text="${contato.email}"></td>
             <td th:text="${contato.mensagem}"></td>
+            <td>
+                <a th:href="@{/delete/{id}(id=${contato.id})}">
+                    <img src="img/trash.svg">
+                </a>
+                <a th:href="@{/edit/{id}(id=${contato.id})}">
+                    <img src="img/pencil.svg">
+                </a>
+            </td>
+
+
         </tr>
 
         </tbody>

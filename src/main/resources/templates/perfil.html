@@ -9,6 +9,7 @@
 <body>
   <div th:include="/commons/menu.html"></div>
   <form action="/perfil" method="post" th:object="${perfil}">
+
     <label for="nome">Nome: </label>
     <input type="text" name="nome" id="nome" th:field="*{nome}"/> <br /> <br />
 

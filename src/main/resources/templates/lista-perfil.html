@@ -15,6 +15,7 @@
                     <th>CPF:</th>
                     <th>Nome:</th>
                     <th>E-mail:</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +23,14 @@
                     <td th:text="${perfil.cpf}"></td>
                     <td th:text="${perfil.nome}"></td>
                     <td th:text="${perfil.email}"></td>
+                    <td>
+                        <a th:href="@{/perfil/delete/{cpf}(cpf=${perfil.cpf})}">
+                            <img src="img/trash.svg">
+                        </a>
+                        <a th:href="@{/edit/perfil/{cpf}(cpf=${perfil.cpf})}">
+                            <img src="img/pencil.svg">
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>
